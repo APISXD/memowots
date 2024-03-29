@@ -161,8 +161,8 @@ button {
   }
   .card-before img,
   .card-after img {
-    width: 60px; /* Mengurangi ukuran gambar agar sesuai dengan layar seluler */
-    height: auto; /* Mengatur tinggi gambar agar sesuai proporsinya */
+    width: 80px;
+    height: 112.8125px;
   }
 }
 
