@@ -135,3 +135,16 @@ button {
   font-size: 1.8em;
   margin: 0.6em 0 1em 0;
 }
+/* Contoh Media Query untuk perangkat seluler dengan lebar maksimum 768px */
+@media only screen and (max-width: 768px) {
+  /* Atur tata letak atau ukuran elemen yang sesuai */
+  .wrapper {
+    width: 90%; /* Misalnya, mengurangi lebar wrapper agar cocok dengan layar seluler */
+    padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
+  }
+  /* Atur ukuran font atau margin untuk menyesuaikan dengan tampilan seluler */
+  .card-before {
+    font-size: 2em;
+  }
+}
+
