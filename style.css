@@ -147,6 +147,25 @@ button {
     font-size: 2em;
   }
 }
+.footer {
+  text-align: center;
+  font-size: 14px; /* Ukuran font untuk footer */
+  position: fixed; /* Mengubah posisi menjadi tetap */
+  bottom: 0; /* Meletakkan footer di bagian bawah */
+  left: 0;
+  right: 0;
+  display: flex; /* Menggunakan flexbox */
+  justify-content: center; /* Pusatkan konten secara horizontal */
+  align-items: center; /* Pusatkan konten secara vertikal */
+  padding: 10px; /* Beri padding untuk estetika */
+}
+
+.footer .social-media-link {
+
+  width: 40px; /* Menyesuaikan lebar gambar jika digunakan */
+  height: 40px; /* Mengatur tinggi agar proporsional */
+  color: #000000;
+}
 /* Untuk membuat konten lebih responsif di perangkat seluler */
 @media only screen and (max-width: 768px) {
   .wrapper {
