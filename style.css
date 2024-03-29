@@ -11,8 +11,8 @@ body {
 }
 .wrapper {
   box-sizing: content-box;
-  width: 90%; /* Mengurangi lebar wrapper agar cocok dengan layar seluler */
-  padding: 1.5em;
+  width: 26.87em;
+  padding: 2.5em 3em;
   background-color: #ffffff;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -36,7 +36,7 @@ body {
 }
 .card-container {
   position: relative;
-  width: 100%;
+  width: 6.25em;
   height: 6.25em;
   cursor: pointer;
   margin-top: 0.5em; /* Margin for the top */
@@ -45,8 +45,8 @@ body {
 }
 .card-before img,
 .card-after img {
-  width: 60px; /* Mengurangi ukuran gambar agar sesuai dengan layar seluler */
-  height: auto;
+  width: 80px;
+  height: 112.8125px;
 }
 .card-before,
 .card-after {
@@ -74,11 +74,9 @@ body {
 }
 .card-container.flipped .card-before {
   transform: rotateY(180deg);
-  width: 100%;
 }
 .card-container.flipped .card-after {
   transform: rotateY(0deg);
-  width: 100%;
 }
 .controls-container {
   position: absolute;
@@ -87,7 +85,7 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 120%;
+  height: 100%;
   background-image: url('img/bg.jpg'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
   background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan ukuran elemen */
   background-repeat: no-repeat; /* Agar gambar tidak diulang */
@@ -136,5 +134,35 @@ button {
 #result h4 {
   font-size: 1.8em;
   margin: 0.6em 0 1em 0;
+}
+/* Contoh Media Query untuk perangkat seluler dengan lebar maksimum 768px */
+@media only screen and (max-width: 768px) {
+  /* Atur tata letak atau ukuran elemen yang sesuai */
+  .wrapper {
+    width: 90%; /* Misalnya, mengurangi lebar wrapper agar cocok dengan layar seluler */
+    padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
+  }
+  /* Atur ukuran font atau margin untuk menyesuaikan dengan tampilan seluler */
+  .card-before {
+    font-size: 2em;
+  }
+}
+/* Untuk membuat konten lebih responsif di perangkat seluler */
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 90%; /* Mengurangi lebar wrapper agar cocok dengan layar seluler */
+    padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
+  }
+  .card-container {
+    width: 100%; /* Mengubah lebar kartu agar mengisi lebar layar */
+  }
+  .card-container.flipped .card-before, .card-container.flipped .card-after {
+    width: 100%; /* Mengatur lebar kartu yang dibalik agar mengisi lebar layar */
+  }
+  .card-before img,
+  .card-after img {
+    width: 60px; /* Mengurangi ukuran gambar agar sesuai dengan layar seluler */
+    height: auto; /* Mengatur tinggi gambar agar sesuai proporsinya */
+  }
 }
 
