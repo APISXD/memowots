@@ -50,6 +50,20 @@
     <script src="script.js"></script>
 
     <script>
+      window.addEventListener("beforeunload", function () {
+        // Ketika pengguna akan melakukan refresh halaman
+        // Hapus sementara overflow hidden agar browser bisa menampilkan scrollbar
+        document.body.style.overflow = "auto";
+      });
+
+      window.addEventListener("load", function () {
+        // Setelah halaman selesai dimuat
+        // Kembalikan overflow hidden
+        document.body.style.overflow = "hidden";
+      });
+    </script>
+
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         const audioElement = document.getElementById("song");
         audioElement.play(); // Memulai pemutaran lagu saat halaman dimuat
