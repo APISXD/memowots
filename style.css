@@ -165,6 +165,7 @@ button {
   .wrapper {
     width: 90%; /* Mengurangi lebar wrapper agar cocok dengan layar seluler */
     padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
+    background-color: transparent;
   }
   .card-container {
     width: 100%; /* Mengubah lebar kartu agar mengisi lebar layar */
