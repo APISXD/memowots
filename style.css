@@ -161,7 +161,7 @@ button {
   color: #000000;
 }
 /* Untuk membuat konten lebih responsif di perangkat seluler */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 415px) {
   .wrapper {
     width: 90%; /* Mengurangi lebar wrapper agar cocok dengan layar seluler */
     padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
