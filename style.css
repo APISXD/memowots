@@ -74,7 +74,7 @@ body {
   font-weight: 600; /* Ketebalan font (bold) */
 }
 .card-after {
-  background-color: white;
+  background-color: black;
   transform: rotateY(180deg);
 }
 .card-container.flipped .card-before {
