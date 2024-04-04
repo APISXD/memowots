@@ -25,6 +25,7 @@ body {
   top: 50%;
   border-radius: 0.6em;
   box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  padding-bottom: 6em;
 }
 .game-container {
   position: relative;
@@ -106,7 +107,7 @@ button {
   cursor: pointer;
 }
 #stop {
-  font-size: 0.5em;
+  font-size: 0.8em;
   display: block;
   margin: 1.1em auto 0 auto;
   background-color: #000000;
@@ -162,7 +163,7 @@ button {
   padding-top: 20px;
   width: 40px; /* Menyesuaikan lebar gambar jika digunakan */
   height: 40px; /* Mengatur tinggi agar proporsional */
-  color: #000000;
+  color: #ffffff;
 }
 /* Untuk membuat konten lebih responsif di perangkat seluler */
 @media only screen and (max-width: 375px) {
