@@ -10,8 +10,8 @@ html, body {
 body {
   background-image: url('img/bgpajama.png'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
   background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan ukuran elemen */
+  background-position: center center;
   background-repeat: no-repeat; /* Agar gambar tidak diulang */
-  overflow-wrap: hidden;
 }
 .wrapper {
   box-sizing: content-box;
@@ -95,6 +95,7 @@ body {
   height: 100%;
   background-image: url('img/bgpajama.png'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
   background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan ukuran elemen */
+  background-position: center;
   background-repeat: no-repeat; /* Agar gambar tidak diulang */
   top: 0;
 }
@@ -164,11 +165,10 @@ button {
   color: #000000;
 }
 /* Untuk membuat konten lebih responsif di perangkat seluler */
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 375px) {
   .wrapper {
     width: 90%; /* Mengurangi lebar wrapper agar cocok dengan layar seluler */
     padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
-    background-color: transparent;
   }
   .card-container {
     width: 100%; /* Mengubah lebar kartu agar mengisi lebar layar */
@@ -181,12 +181,11 @@ button {
     width: 73.1428571px;
     height: 103.142857px;
   }
+  .controls-container {
+    padding: 10px;
+  }
   #stop {
     font-size: 0.4em;
-  }
-  body {
-    background-size: cover;
-    background-position: center bottom;
   }
   .footer {
     font-size: 12px;
@@ -205,7 +204,6 @@ body {
   background-image: url(background.jpg);
   background-size: cover;
   background-position: center;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
