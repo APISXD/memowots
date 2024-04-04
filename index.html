@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" type="x-icon" href="img/logo.jpg">
+    <link rel="shortcut icon" type="x-icon" href="img/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
     <!-- Google Fonts -->
@@ -12,9 +12,14 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <link
-    rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" />
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
   </head>
   <body>
+    <div id="container">
+      <div class="snow"></div>
+    </div>
     <div class="wrapper">
       <div class="stats-container">
         <div id="moves-count"></div>
@@ -26,34 +31,52 @@
     <div class="controls-container">
       <p id="result"></p>
       <button id="start">Start Game</button>
-      <button id="start" onclick="window.location.href='/memowots'" class="btn">Play Song</button>
-      <button id="otherg" onclick="window.location.href='/afp/games.html'" class="btn">Other Games</button>
+      <button id="start" onclick="window.location.href='/memowots'" title="Song Source @jkter48" class="btn">Play Song</button>
+      <button
+        id="otherg"
+        onclick="window.location.href='/afp/games.html'"
+        class="btn"
+      >
+        Other Games
+      </button>
     </div>
 
     <audio id="song" loop>
-      <source src="audio/fullkalimba.mp3" type="audio/mpeg">
+      <source src="audio/fullkalimba.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
 
     <!-- Script -->
     <script src="script.js"></script>
 
-      <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const audioElement = document.getElementById("song");
-      audioElement.play(); // Memulai pemutaran lagu saat halaman dimuat
-    });
-  </script>
-<p class="footer">
-  <a class="social-media-link" href="https://apisxd.github.io/afp" title="Github">
-    <i class="fab fa-github"></i>
-  </a>
-  <a class="social-media-link" href="https://instagram.com/adityfaizp" title="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a class="social-media-link" href="https://twitter.com/adityfaiz" title="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-</p>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audioElement = document.getElementById("song");
+        audioElement.play(); // Memulai pemutaran lagu saat halaman dimuat
+      });
+    </script>
+    <p class="footer">
+      <a
+        class="social-media-link"
+        href="https://apisxd.github.io/afp"
+        title="Github"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        class="social-media-link"
+        href="https://instagram.com/adityfaizp"
+        title="Instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        class="social-media-link"
+        href="https://twitter.com/adityfaiz"
+        title="Twitter"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </p>
   </body>
 </html>
