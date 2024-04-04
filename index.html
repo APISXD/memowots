@@ -56,17 +56,19 @@
     <script src="script.js"></script>
 
     <script>
-      window.addEventListener("beforeunload", function () {
-        // Ketika pengguna akan melakukan refresh halaman
-        // Hapus sementara overflow hidden agar browser bisa menampilkan scrollbar
-        document.body.style.overflow = "auto";
-      });
+        window.addEventListener('beforeunload', function() {
+            // Ketika pengguna akan melakukan refresh halaman
+            // Akses elemen html dan body, kemudian atur overflow menjadi 'auto' sementara
+            document.querySelector('html').style.overflow = 'auto';
+            document.querySelector('body').style.overflow = 'auto';
+        });
 
-      window.addEventListener("load", function () {
-        // Setelah halaman selesai dimuat
-        // Kembalikan overflow hidden
-        document.body.style.overflow = "hidden";
-      });
+        window.addEventListener('load', function() {
+            // Setelah halaman selesai dimuat
+            // Kembalikan overflow hidden
+            document.querySelector('html').style.overflow = 'hidden';
+            document.querySelector('body').style.overflow = 'hidden';
+        });
     </script>
 
     <script>
