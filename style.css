@@ -5,13 +5,15 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-image: url('img/bg.jpg'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
+  background-image: url('img/bgpajama.png'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
   background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan ukuran elemen */
   background-repeat: no-repeat; /* Agar gambar tidak diulang */
+  overflow-wrap: hidden;
 }
 .wrapper {
   box-sizing: content-box;
-  width: 26.87em;
+  width: 20em;
+  height: 30em;
   padding: 2.5em 3em;
   background-color: #ffffff;
   position: absolute;
@@ -24,8 +26,10 @@ body {
 .game-container {
   position: relative;
   width: 100%;
+  height: 80%;
   display: grid;
   gap: 0.6em;
+  margin: 0 auto;
 }
 .stats-container {
   text-align: right;
@@ -36,24 +40,24 @@ body {
 }
 .card-container {
   position: relative;
-  width: 6.25em;
-  height: 6.25em;
+  width: 4.7em; /* Ubah nilai lebar sesuai kebutuhan Anda */
+  height: 4.7em; /* Ubah nilai tinggi sesuai kebutuhan Anda */
   cursor: pointer;
-  margin-top: 0.5em; /* Margin for the top */
-  margin-bottom: 0.5em; /* Margin for the bottom */
-
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: -2px;
 }
 .card-before img,
 .card-after img {
-  width: 80px;
-  height: 112.8125px;
+  width: 60.04px;
+  height: 84.6942813px;
 }
 .card-before,
 .card-after {
   position: absolute;
   border-radius: 5px;
-  width: 100%;
-  height: 120%;
+  width: 90%;
+  height: 118%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +73,7 @@ body {
   font-weight: 600; /* Ketebalan font (bold) */
 }
 .card-after {
-  background-color: #ffffff;
+  background-color: white;
   transform: rotateY(180deg);
 }
 .card-container.flipped .card-before {
@@ -86,7 +90,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-image: url('img/bg.jpg'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
+  background-image: url('img/bgpajama.png'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
   background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan ukuran elemen */
   background-repeat: no-repeat; /* Agar gambar tidak diulang */
   top: 0;
@@ -98,11 +102,12 @@ button {
   cursor: pointer;
 }
 #stop {
-  font-size: 1.1em;
+  font-size: 0.5em;
   display: block;
   margin: 1.1em auto 0 auto;
   background-color: #000000;
   color: #ffffff;
+  margin-top: 4em;
 }
 #start {
   font-size: 1.1em;
@@ -114,7 +119,7 @@ button {
 #otherg {
   font-size: 1.1em;
   display: block;
-  margin: 0.2em auto 0 auto;
+  margin: 1.1em auto 0 auto;
   background-color: #000000;
   color: #ffffff;
 }
@@ -135,21 +140,10 @@ button {
   font-size: 1.8em;
   margin: 0.6em 0 1em 0;
 }
-/* Contoh Media Query untuk perangkat seluler dengan lebar maksimum 768px */
-@media only screen and (max-width: 768px) {
-  /* Atur tata letak atau ukuran elemen yang sesuai */
-  .wrapper {
-    width: 90%; /* Misalnya, mengurangi lebar wrapper agar cocok dengan layar seluler */
-    padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
-  }
-  /* Atur ukuran font atau margin untuk menyesuaikan dengan tampilan seluler */
-  .card-before {
-    font-size: 2em;
-  }
-}
+
 .footer {
   text-align: center;
-  font-size: 14px; /* Ukuran font untuk footer */
+  font-size: 10px; /* Ukuran font untuk footer */
   position: fixed; /* Mengubah posisi menjadi tetap */
   bottom: 0; /* Meletakkan footer di bagian bawah */
   left: 0;
@@ -161,13 +155,13 @@ button {
 }
 
 .footer .social-media-link {
-
+  padding-top: 20px;
   width: 40px; /* Menyesuaikan lebar gambar jika digunakan */
   height: 40px; /* Mengatur tinggi agar proporsional */
   color: #000000;
 }
 /* Untuk membuat konten lebih responsif di perangkat seluler */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   .wrapper {
     width: 90%; /* Mengurangi lebar wrapper agar cocok dengan layar seluler */
     padding: 1.5em; /* Mengurangi padding agar sesuai dengan ukuran layar yang lebih kecil */
@@ -183,5 +177,61 @@ button {
     width: 73.1428571px;
     height: 103.142857px;
   }
+  #stop {
+    font-size: 0.4em;
+  }
+  body {
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .footer {
+    font-size: 12px;
+  }
 }
 
+
+@import url("https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap");
+body {
+  margin: 0;
+}
+#container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 100px;
+  font-family: "Snowburst One", cursive;
+}
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url(snow.png);
+  background-size: cover;
+  animation: animationSnow 4s ease-in-out infinite;
+}
+@keyframes animationSnow {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 50vh);
+  }
+}
