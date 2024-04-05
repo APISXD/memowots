@@ -1,1 +1,1 @@
-Memowots adalah game memory bertemakan jkt48
+Memowots adalah game memory bertemakan JKT48
