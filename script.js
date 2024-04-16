@@ -466,26 +466,27 @@ stopButton.addEventListener(
 );
 function results() {
   // Menyembunyikan tombol-tombol
-      controls.classList.remove("hide");
+  controls.classList.remove("hide");
   startButton.classList.add("hide");
   stopButton.classList.add("hide");
-    var playsonf = document.getElementById("start");
-    var lagus = document.getElementById("otherg");
+  var playsonf = document.getElementById("start");
+  var lagus = document.getElementById("otherg");
 
-    // Hide the buttons
-    playsonf.style.display = "none";
-   lagus.style.display = "none";
-       var resultParagraph = document.getElementById("result");
-       resultParagraph.style.display = "block"; 
-       let time = timeValue.innerHTML.replace("<span>Time:</span>", "");
-
-    // Display result including moves and time
-    result.innerHTML = `
+  // Hide the buttons
+  playsonf.style.display = "none";
+  lagus.style.display = "none";
+  var resultParagraph = document.getElementById("result");
+  resultParagraph.style.display = "block";
+  let time = timeValue.innerHTML.replace("<span>Time:</span>", "");
+  // Memainkan suara kemenangan
+  var winSound = document.getElementById("win-sound");
+  winSound.play();
+  // Display result including moves and time
+  result.innerHTML = `
         <h2>You Won</h2>
         <h4>Moves: ${movesCount}</h4>
         <h4>Time: ${time}</h4>
-    `
-
+    `;
 };
 
 
