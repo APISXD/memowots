@@ -469,7 +469,6 @@ function results() {
       controls.classList.remove("hide");
   startButton.classList.add("hide");
   stopButton.classList.add("hide");
-  stoptwice.classList.remove("hide");
     var playsonf = document.getElementById("start");
     var lagus = document.getElementById("otherg");
 
