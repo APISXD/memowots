@@ -41,13 +41,37 @@
     </div>
 
     <div class="controls-container">
-
                   <p id="result"  style="display: none;"></p>
          <h2 id="atasmode">Mode
             <i id="arrowsss" class="fas fa-arrow-down"></i>
          </h2>
-<div id="modess" style="display: none;">
+         <!-- Tombol Help dengan Font Awesome -->
+<div class="help-icon" onclick="toggleHelp()">
+    <i class="fa-solid fa-circle-info"></i>
+</div>
 
+<!-- Konten Pesan Bantuan -->
+<div id="help-container" class="help-container">
+    <span class="close-btn" onclick="toggleHelp()">
+        <i class="fa-solid fa-xmark"></i>
+    </span>
+    <p>
+        <strong id="strongmid">Selamat Datang di Memowots!</strong><br>
+Memowots adalah permainan memori yang menantang di mana Anda mencocokkan kartu dengan Member yang sama. Anda bermain dengan mengungkapkan kartu satu per satu dan mencoba mengingat posisinya.</br>
+        <strong id="strongmid">Cara Bermain:</strong><br>
+        1. Ketuk atau klik pada kartu untuk mengungkapnya.<br>
+        2. Ingatlah posisi setiap kartu yang Anda buka.<br>
+        3. Coba untuk mencocokkan dua kartu yang memiliki gambar yang sama.<br>
+        4. Cocokkan semua kartu dengan sedikit gerakan dan waktu sebanyak mungkin untuk mendapatkan skor tertinggi.<br>
+       <strong id="strongmid"> Mode Permainan:</strong><br>
+        - Trainee Only: Khusus Trainee JKT48.<br>
+        - Member Only: Khusus Member JKT48.<br>
+        - Member & Trainee: Mode campuran.<br>
+        Selamat bermain dan semoga Anda menikmati Memowots!
+    </p>
+</div>
+<div id="modess" style="display: none;">
+  
   <button id="easy-button">Trainee Only</button>
   <button id="medium-button">Member Only</button>
   <button id="hard-button">Member & Trainee</button>
@@ -55,6 +79,7 @@
 
       <button id="start1">Start Game</button>
       <button id="start" onclick="location.reload();" title="Song Source @jkter48">Play Song</button>
+
       <button
         id="otherg"
         onclick="window.location.href='https://faizz.vercel.app/games.html'"
@@ -63,6 +88,7 @@
       </button>
 
     </div>
+
               <div id="container"></div>
  <audio id="song" loop>
       <source src="audio/fullkalimba.mp3" type="audio/mpeg" />
@@ -149,6 +175,17 @@ h2Element.addEventListener('click', function() {
     buttonsDiv.style.opacity = '1';
   }
 });
+</script>
+<script>
+    // Fungsi untuk menampilkan atau menyembunyikan pesan bantuan
+    function toggleHelp() {
+        var helpContainer = document.getElementById("help-container");
+        if (helpContainer.style.display === "none" || helpContainer.style.display === "") {
+            helpContainer.style.display = "block";
+        } else {
+            helpContainer.style.display = "none";
+        }
+    }
 </script>
 
     <p class="footer">
