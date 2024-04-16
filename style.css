@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 body {
   background-image: url('img/bgpajama.png'); /* Ganti 'gambar.jpg' dengan path/URL gambar Anda */
@@ -10,10 +10,14 @@ body {
   background-position: center center;
   background-repeat: no-repeat; /* Agar gambar tidak diulang */
 }
+    select {
+      padding: 5px;
+      font-size: 16px;
+    }
 .wrapper {
   box-sizing: content-box;
   width: 20em;
-  height: 30em;
+  height: 29em;
   padding: 2.5em 3em;
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
@@ -115,32 +119,153 @@ button {
   font-size: 1.1em;
   display: block;
   margin: 1.1em auto 0 auto;
-  background-color: #000000;
-  color: #ffffff;
+      transition: opacity 0.9s ease; /* Tambahkan transisi untuk opacity */
+  background-color: rgb(0, 0, 0, 0.4);
+  color: #efefef;
+}
+#start:hover {
+      cursor: pointer;
+}
+/* Reset default select styles */
+select {
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background: rgb(0, 0, 0, 0.9);
+   background-image: none;
+   flex: 1;
+   padding: 0 1em;
+   color:#fff;
+   cursor:pointer;
+   font-size: 1em;
+   font-family: "Montserrat", sans-serif;
+}
+select::-ms-expand {
+   display: none;
+}
+.select {
+   position: relative;
+   display: flex;
+   width: 20em;
+   height: 3em;
+   line-height: 3;
+   background: #5c6664;
+   overflow: hidden;
+   border-radius: .25em;
+   color: white;
+}
+.select::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   cursor:pointer;
+   pointer-events:none;
+   transition:.25s all ease;
+}
+.select:hover::after {
+  color: #e49a04;
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  25% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+
+.card-container.flipped .card-before {
+    transform: perspective(1000px) rotateY(-180deg);
+}
+
+.card-container.flipped .card-after {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+#easy-button, #medium-button, #hard-button {
+      transition: opacity 0.9s ease; /* Tambahkan transisi untuk opacity */
+  background-color: rgb(0, 0, 0, 0.4);
+  color: #efefef;
+  font-size: 14px;
+  margin: 5px;
+}
+#modess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#atasmode {
+  margin-bottom: 20px;
+  text-align: center;
+  color: azure;
+    filter: drop-shadow(0 0 0.75rem rgb(38, 82, 145));
+      transition: opacity 1s ease; /* Tambahkan transisi untuk opacity */
+}
+#arrowsss {
+cursor: pointer;
+  color: #e49a04;
+  animation: bounce 0.5s infinite;
+}
+
+
+@keyframes bounce {
+  25% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+#start1 {
+  display: none;
 }
 #otherg {
   font-size: 1.1em;
   display: block;
   margin: 1.1em auto 0 auto;
-  background-color: #000000;
-  color: #ffffff;
+      transition: opacity 0.9s ease; /* Tambahkan transisi untuk opacity */
+  background-color: rgb(0, 0, 0, 0.4);
+  color: #efefef;
 }
+
 .controls-container button {
   font-size: 1.3em;
   box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
 }
 .hide {
-  display: none;
+ display: none;
 }
 #result {
+  height: 35%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+    background-color: rgb(0, 0, 0,);
+  color: #efefef;
+  border-radius: 20px;
+  
 }
 #result h2 {
   font-size: 2.5em;
+    filter: drop-shadow(0 0 0.75rem rgb(38, 82, 145));
 }
 #result h4 {
   font-size: 1.8em;
-  margin: 0.6em 0 1em 0;
+  margin: 10px;
+      filter: drop-shadow(0 0 0.75rem rgb(38, 82, 145));
 }
 
 .footer {
@@ -161,7 +286,57 @@ button {
   width: 40px; /* Menyesuaikan lebar gambar jika digunakan */
   height: 40px; /* Mengatur tinggi agar proporsional */
   color: #ffffff;
+    transition: transform 0.5s ease-out;
 }
+.social-media-link:hover {
+  transform: scale(1.5) translateY(-10px);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap");
+body {
+  margin: 0;
+}
+#container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url(snow.png);
+  background-size: cover;
+  animation: animationSnow 4s ease-in-out infinite;
+}
+@keyframes animationSnow {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 50vh);
+  }
+}
+
 /* Untuk membuat konten lebih responsif di perangkat seluler */
 @media only screen and (max-width: 375px) {
   .wrapper {
@@ -190,48 +365,3 @@ button {
   }
 }
 
-
-@import url("https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap");
-body {
-  margin: 0;
-}
-#container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url(background.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-h1 {
-  color: #fff;
-  margin: 0;
-  font-size: 100px;
-  font-family: "Snowburst One", cursive;
-}
-.snow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  background-image: url(snow.png);
-  background-size: cover;
-  animation: animationSnow 4s ease-in-out infinite;
-}
-@keyframes animationSnow {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(100px, 50vh);
-  }
-}
