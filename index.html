@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="x-icon" href="img/logo.jpg" />
     <meta name="viewport" content="width=500, height=1000, initial-scale=1.0"/>
     <title>Memory Game</title>
@@ -15,15 +19,12 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
     />
-    <style>
-      html,
-      body {
-        overflow: hidden;
-      }
-    </style>
+    
   </head>
   <body>
+
     <div id="container">
+      
       <div class="snow"></div>
     </div>
     <div class="wrapper">
@@ -31,23 +32,37 @@
         <div id="moves-count"></div>
         <div id="time"></div>
       </div>
+
       <div class="game-container"></div>
+      
       <button id="stop" class="hide">Stop Game</button>
     </div>
+          <div class="snow"></div>
+    </div>
     <div class="controls-container">
-      <p id="result"></p>
-      <button id="start">Start Game</button>
-      <button id="start" onclick="window.location.href='/memowots'" title="Song Source @jkter48" class="btn">Play Song</button>
+                  <p id="result"  style="display: none;"></p>
+         <h2 id="atasmode">Mode
+            <i id="arrowsss" class="fas fa-arrow-down"></i>
+         </h2>
+<div id="modess" style="display: none;">
+
+  <button id="easy-button">Trainee Only</button>
+  <button id="medium-button">Member Only</button>
+  <button id="hard-button">Member & Trainee</button>
+</div>
+
+      <button id="start1">Start Game</button>
+      <button id="start" onclick="window.location.href='/memowots'" title="Song Source @jkter48">Play Song</button>
       <button
         id="otherg"
-        onclick="window.location.href='/afp/games.html'"
-        class="btn"
+        onclick="window.location.href='https://faizz.vercel.app/games.html'"
       >
         Other Games
       </button>
+
     </div>
 
-    <audio id="song" loop>
+ <audio id="song" loop>
       <source src="audio/fullkalimba.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
@@ -70,13 +85,69 @@
             document.querySelector('body').style.overflow = 'hidden';
         });
     </script>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const audioElement = document.getElementById("song");
         audioElement.play(); // Memulai pemutaran lagu saat halaman dimuat
       });
     </script>
+  
+<script>
+// Define the function to reveal all cards
+function revealAllCards() {
+  cards.forEach((card) => {
+    card.classList.add("flipped");
+  });
+    const allMatched = Array.from(cards).every((card) => card.classList.contains("matched"));
+  if (allMatched) {
+    result.innerHTML = `<h2>You Won</h2>
+                        <h4>Moves: ${movesCount}</h4>`;
+    stopGame();
+  }
+}
+
+// Call the function when the "R" key is pressed
+document.addEventListener("keydown", function (event) {
+  if (event.code === "KeyR") {
+    revealAllCards();
+  }
+});
+
+var stopbutton = document.getElementById("stop");
+
+// Menambahkan event listener untuk mendeteksi ketika tombol spasi ditekan
+document.addEventListener("keydown", function (event) {
+   if (event.code === "Escape") {
+    stopbutton.click();
+  }
+});
+// Dapatkan referensi ke elemen h2
+var h2Element = document.getElementById('atasmode');
+
+// Dapatkan referensi ke div yang berisi tombol-tombol
+var buttonsDiv = document.getElementById('modess');
+
+buttonsDiv.style.display = 'flex';
+// Tambahkan event listener ke elemen h2
+h2Element.addEventListener('click', function() {
+  // Periksa apakah div tombol-tombol sedang ditampilkan atau disembunyikan
+  if (buttonsDiv.style.display === 'none') {
+    // Jika disembunyikan, maka tampilkan
+    buttonsDiv.style.display = 'flex';
+  } else {
+    // Jika ditampilkan, maka sembunyikan
+    buttonsDiv.style.display = 'none';
+  }
+    if (buttonsDiv.style.opacity === '0') { // Periksa berdasarkan opacity
+    // Jika disembunyikan, maka tampilkan dengan transisi
+    buttonsDiv.style.opacity = '1';
+  } else {
+    // Jika ditampilkan, maka sembunyikan dengan transisi
+    buttonsDiv.style.opacity = '1';
+  }
+});
+</script>
+
     <p class="footer">
       <a
         class="social-media-link"
