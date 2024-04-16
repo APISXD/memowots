@@ -455,7 +455,8 @@ stopButton.addEventListener(
     startButton.classList.remove("hide");
         var playsonf = document.getElementById("start");
         var lagus = document.getElementById("otherg");
-
+       var resultParagraph = document.getElementById("result");
+       resultParagraph.style.display = "none"; 
         // Hide the buttons
         playsonf.style.display = "block";
         lagus.style.display = "block";
