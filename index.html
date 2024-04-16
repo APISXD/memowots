@@ -23,7 +23,7 @@
   </head>
   <body>
 
-    <div id="container">
+
       
       <div class="snow"></div>
     </div>
@@ -39,7 +39,9 @@
     </div>
           <div class="snow"></div>
     </div>
+
     <div class="controls-container">
+
                   <p id="result"  style="display: none;"></p>
          <h2 id="atasmode">Mode
             <i id="arrowsss" class="fas fa-arrow-down"></i>
@@ -61,7 +63,7 @@
       </button>
 
     </div>
-
+              <div id="container"></div>
  <audio id="song" loop>
       <source src="audio/fullkalimba.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
@@ -85,6 +87,7 @@
             document.querySelector('body').style.overflow = 'hidden';
         });
     </script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const audioElement = document.getElementById("song");
