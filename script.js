@@ -2,6 +2,7 @@ const moves = document.getElementById("moves-count");
 const timeValue = document.getElementById("time");
 const startButton = document.getElementById("start1");
 const stopButton = document.getElementById("stop");
+const stoptwice = document.getElementById("stop12")
 const gameContainer = document.querySelector(".game-container");
 const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
@@ -468,6 +469,7 @@ function results() {
       controls.classList.remove("hide");
   startButton.classList.add("hide");
   stopButton.classList.add("hide");
+  stoptwice.classList.remove("hide");
     var playsonf = document.getElementById("start");
     var lagus = document.getElementById("otherg");
 
@@ -483,9 +485,9 @@ function results() {
         <h2>You Won</h2>
         <h4>Moves: ${movesCount}</h4>
         <h4>Time: ${time}</h4>
-    `;
+    `
 
-}
+};
 
 
 //Initialize values and func calls
